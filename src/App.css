@@ -133,14 +133,13 @@ nav li {
   font-size: 2.5em;
 }
 
-.cuerpo contenedor {
+.cuerpo .contenedor {
   display: grid;
   grid-template-columns: repeat(3,1fr);
 }
 
-.cuerpo contenedor div {
+.cuerpo .contenedor div {
   width: 90%;
-  justify-content: space-between;
   display: flex;
   flex-direction: column;
 }
@@ -153,7 +152,7 @@ nav li {
 }
 
 .cuerpo div span {
-  padding: 8px 0 0 0;
+  padding: 20px 0 0 0;
   display: block;
   font-size: 18px;
   text-align: center;
@@ -165,4 +164,41 @@ nav li {
   font-weight: 300;
   text-align: center;
   color: black;
+}
+
+.aboutme {
+  box-sizing: border-box;
+  text-align: center;
+  font-family: 'Ubuntu';
+  color: white;
+  margin: auto;
+  position: relative;
+  width: 95%;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  padding: 40px;
+}
+
+.aboutme .acercademi {
+  padding: 0 15px;
+}
+
+.aboutme .acercademi h1 {
+  font-size: 37px;
+  text-align: center;
+  font-weight: 700;
+  font-family: Poppins;
+}
+
+.aboutme .acercademi p {
+  text-align: left;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 30px;
+}
+
+.aboutme .yo img {
+  width: 345px;
+  height: 376px;
+  padding: 0 15px;
 }

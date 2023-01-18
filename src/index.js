@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App, {Title, Fondo, Cuerpo} from './App';
+import App, {Title, Fondo, Cuerpo, Aboutme} from './App';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -11,6 +11,7 @@ root.render(
     <App />
     <Title />
     <Cuerpo />
+    <Aboutme />
   </React.StrictMode>
 );
 

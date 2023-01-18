@@ -3,6 +3,8 @@ import background from "./background.jpg";
 import pcicons from './img/system-network-svgrepo-com.png';
 import soportestaff from "./img/support-svgrepo-com-300x300.png";
 import forum from "./img/forum-message-svgrepo-com-300x300.png";
+import mac from "./img/apple-mac.jpg"
+import yo from "./img/PortadaHW-940x1024.png"
 import './App.css';
 import styled, { keyframes } from 'styled-components';
 
@@ -16,7 +18,8 @@ export function Fondo() {
             height: '100%',
             width: '100%',
             zIndex: -10,
-            position: 'absolute'
+            position: 'absolute',
+            backgroundRepeat: "no-repeat"
         }}>
         </div>
     );
@@ -76,7 +79,7 @@ export function Cuerpo() {
     return (
         <div className="cuerpo">
             <h1>Nuestros servicios son</h1>
-            <contenedor>
+            <div className="contenedor">
             <div>
                 <img src={pcicons} alt="pcicons"/>
                 <span>Infraestructura de red</span>
@@ -98,7 +101,43 @@ export function Cuerpo() {
                     Brindamos soporte tecnico para inconvenientes con equipos de Computo(Laptop, Desktop, Ultrabook, MacBook) con respecto a fallas tanto de sistema como de hardware adicionalmente a equipos de redes como routers, repetidores, etc.
                 </p>
             </div>
-            </contenedor>
+            </div>
         </div>
+    );
+}
+
+export function Aboutme() {
+    return (
+      <div className="aboutme">
+          <div style={{
+              backgroundImage: `url(${mac})`,
+              backgroundSize: '100% auto',
+              backgroundPositionY: '57%',
+              opacity: (0.3),
+              height: '100%',
+              width: '100%',
+              zIndex: -10,
+              position: 'absolute'
+          }}>
+          </div>
+          <div className="acercademi">
+              <h1>
+                  Acerca de mi
+              </h1>
+              <p>
+                  Mi nombre es Omar Vilera, me dedico desde hace aproximadamente 9 años al rubro tecnológico, cuento con habilidades y conocimientos sobre el hardware y software de equipos computo en general.
+              </p>
+              <p>
+                  Actualmente me encuentro estudiando la carrera técnica de “Administración de redes y comunicaciones”.
+              </p>
+              <p>
+                  Esta página nace como iniciativa de brindar servicios sobre lo que amo hacer. Ofreciendo un servicio de calidad y confiable buscando resolver cualquier problemática que se le presente al cliente.
+              </p>
+          </div>
+          <div className="yo">
+              <img src={yo} alt="yo"/>
+          </div>
+
+      </div>
     );
 }
