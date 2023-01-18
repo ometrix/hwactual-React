@@ -7,6 +7,7 @@ import mac from "./img/apple-mac.jpg"
 import yo from "./img/PortadaHW-940x1024.png"
 import './App.css';
 import styled, { keyframes } from 'styled-components';
+import React, { useState} from "react";
 
 export function Fondo() {
     return (
@@ -25,16 +26,29 @@ export function Fondo() {
     );
 }
 
-function App() {
-  return (
+
+
+
+const App = () => {
+    const [colorChange, setColorchange] = useState(false);
+    const changeNavbarColor = () =>{
+       if(window.scrollY >= 1){
+           setColorchange(true);
+       }
+       else{
+           setColorchange(false);
+       }
+    };
+    window.addEventListener('scroll', changeNavbarColor)
+    return (
     <div className="App">
-      <nav className="App-header">
+      <nav /*className="App-header"*/ className={colorChange ? 'navbar colorChange' : 'navbar'}>
         <img src={logo} className="App-logo" alt="logo" />
         <ul className="mainnav">
-          <li>INICIO</li>
-          <li>BLOG</li>
-          <li>CONTACTO</li>
-          <li className="boton">MAS</li>
+            <li><a href="#">INICIO</a></li>
+          <li><a href="#">BLOG</a></li>
+          <li><a href="#" >CONTACTO</a></li>
+          <li className="boton"><a href="#">MAS</a></li>
           <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="16" height="16">
               <path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
           </svg></li>
@@ -70,7 +84,7 @@ export function Title() {
         <div className="titulo">
             <BrightText>Hardware Actual</BrightText>
             <span>Innovando Siempre</span>
-            <span className="button">CONOCE MAS</span>
+            <span className="button"><a href="#">CONOCE MAS</a></span>
         </div>
     );
 }
