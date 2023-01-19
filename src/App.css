@@ -155,7 +155,33 @@ nav li {
   flex-direction: column;
 }
 
-.cuerpo div img {
+.cuerpo div .servicios {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  margin: 0 auto;
+  animation-duration: .5s;
+  animation-iteration-count: 1;
+}
+
+@keyframes beat {
+  0% {
+    transform: scale(1, 1);
+  }
+  33% {
+    transform: scale(.7, .7);
+  }
+  66% {
+    transform: scale(1.2, 1.2);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+.servicios:hover {
+  animation-name: beat;
+  animation-timing-function: ease-out;
   width: 150px;
   height: 150px;
   display: flex;

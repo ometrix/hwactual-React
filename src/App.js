@@ -89,27 +89,52 @@ export function Title() {
     );
 }
 
+
+
+/*const beat = keyframes`
+  0% {
+    width: 25%;
+    height: 25%;
+  }
+  50% {
+    width: 47%;
+    height: 47%;
+  }
+  100% {
+    width: 25%;
+    height: 25%;
+  }
+`;*/
+
+/*
+const Servicios = styled.img`
+//  text-stroke: 1px black;
+//  -webkit-text-stroke: 1px black;
+  animation: ${beat} 1.5s ease-in-out infinite;
+`;
+*/
+
 export function Cuerpo() {
     return (
         <div className="cuerpo">
             <h1>Nuestros servicios son</h1>
             <div className="contenedor">
             <div>
-                <img src={pcicons} alt="pcicons"/>
+                <img className="servicios" src={pcicons} alt="pcicons"/>
                 <span>Infraestructura de red</span>
                 <p>
                     Te apoyamos con el despliege e implementacion de infraestructuras de red pequeñas o medianas. realizar la planeacion, cotizacion de equipos y configuracion.
                 </p>
             </div>
             <div>
-                <img src={forum} alt="forum"/>
+                <img className="servicios" src={forum} alt="forum"/>
                 <span>Asesoria</span>
                 <p>
                     Brindamos apoyo y asesoria en cuanto a equipo, herramientas de software o redes que desees adquirir para tu casa o negocio.
                 </p>
                 </div>
             <div>
-                <img src={soportestaff} alt="soportestaff"/>
+                <img className="servicios" src={soportestaff} alt="soportestaff"/>
                 <span>Soporte Tecnico</span>
                 <p>
                     Brindamos soporte tecnico para inconvenientes con equipos de Computo(Laptop, Desktop, Ultrabook, MacBook) con respecto a fallas tanto de sistema como de hardware adicionalmente a equipos de redes como routers, repetidores, etc.
